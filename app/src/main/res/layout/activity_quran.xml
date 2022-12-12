@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/prev"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuranActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/Widget.AppCompat.TextView.SpinnerItem"
+        android:layout_width="210dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="108dp"
+        android:scrollbarStyle="insideOverlay"
+        android:text="   QURAN APP"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="47dp"
+        android:layout_height="20dp"
+        android:text="Surat"
+        app:layout_constraintStart_toEndOf="@+id/txt_s"
+        app:layout_constraintTop_toTopOf="@+id/txt_s" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="44dp"
+        android:layout_height="28dp"
+        android:text="Ayat"
+        app:layout_constraintStart_toEndOf="@+id/txt_a"
+        app:layout_constraintTop_toTopOf="@+id/txt_a" />
+
+    <EditText
+        android:id="@+id/txt_s"
+        android:layout_width="44dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/txt_a"
+        android:layout_width="45dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="80dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="1"
+        app:layout_constraintStart_toEndOf="@+id/txt_s"
+        app:layout_constraintTop_toTopOf="@+id/txt_s" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.616"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btnprev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:text="PREV"
+        app:layout_constraintEnd_toStartOf="@+id/btnnext"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="@+id/result"
+        app:layout_constraintTop_toTopOf="@+id/btnnext" />
+
+    <Button
+        android:id="@+id/btnnext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="60dp"
+        android:text="next"
+        app:layout_constraintEnd_toEndOf="@+id/result"
+        app:layout_constraintTop_toBottomOf="@+id/result" />
+
+    <Button
+        android:id="@+id/search"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="72dp"
+        android:text="SEARCH"
+        app:layout_constraintEnd_toEndOf="@+id/btnnext"
+        app:layout_constraintTop_toBottomOf="@+id/btnnext" />
+</androidx.constraintlayout.widget.ConstraintLayout>
