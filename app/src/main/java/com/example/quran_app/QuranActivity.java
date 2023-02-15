@@ -47,6 +47,7 @@ public class QuranActivity extends AppCompatActivity implements View.OnClickList
         btsearch.setOnClickListener(this);
         btnext.setOnClickListener(this);
         btpre.setOnClickListener(this);
+        Repobtn.setOnClickListener(this);
 
 
         theAyat = new QDH();
@@ -87,6 +88,7 @@ public class QuranActivity extends AppCompatActivity implements View.OnClickList
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
                 startActivity(i);
+                break;
 
             default:
                 txtresult.setText("HAYA KARR ..");
