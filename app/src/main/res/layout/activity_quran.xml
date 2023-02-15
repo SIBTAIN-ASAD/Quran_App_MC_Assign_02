@@ -102,4 +102,14 @@
         android:text="SEARCH"
         app:layout_constraintEnd_toEndOf="@+id/btnnext"
         app:layout_constraintTop_toBottomOf="@+id/btnnext" />
+
+    <Button
+        android:id="@+id/rpbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="28dp"
+        android:text="Repository"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search" />
 </androidx.constraintlayout.widget.ConstraintLayout>

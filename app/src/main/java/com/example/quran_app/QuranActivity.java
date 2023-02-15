@@ -2,6 +2,8 @@ package com.example.quran_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,11 +16,14 @@ public class QuranActivity extends AppCompatActivity implements View.OnClickList
     public Button btnext;
     public Button btpre;
     public Button btsearch;
+    public Button Repobtn;
 
     public EditText txts;
     public EditText txta;
 
     public TextView txtresult;
+
+
 
     public int Ayat_num;
 
@@ -37,6 +42,7 @@ public class QuranActivity extends AppCompatActivity implements View.OnClickList
         txtresult = findViewById(R.id.result);
         txta = findViewById(R.id.txt_a);
         txts = findViewById(R.id.txt_s);
+        Repobtn = findViewById(R.id.rpbutton);
 
         btsearch.setOnClickListener(this);
         btnext.setOnClickListener(this);
@@ -76,6 +82,11 @@ public class QuranActivity extends AppCompatActivity implements View.OnClickList
                 AYAT = data.QuranArabicText[Ayat_num];
                 txtresult.setText(AYAT.toString());
                 break;
+            case R.id.rpbutton:
+                String url = "https://github.com/SIBTAIN-ASAD/Quran_App_MC_Assign_02";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
 
             default:
                 txtresult.setText("HAYA KARR ..");
